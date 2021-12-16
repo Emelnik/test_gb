@@ -17,7 +17,27 @@ double GameDuration = 0.0f;
 enum Symbols {zero, cross, empty};
 
 //task 3
-Symbols GameAry[3][3];
+Symbols GameAry[3][3] = { {empty, empty, empty}, {empty, empty, empty}, {empty, empty, empty } };
+
+
+// task 4
+struct GameFeeld
+{
+    char Round;
+    char NamePlayer1[255];
+    char NamePlayer2[255];
+    char SymbolByPlayer1;
+    char SymbolByPlayer2;
+    int ScorePlayer1;
+    int ScorePlayer2;
+    char PlayerIdAccessNow ; // номер игрока, кому разрешено делать ход. 1, 2.
+    char CurentFild[3][3]; //матрица поля
+    char CountLineSymbolPlayer1; // максимальное число символов в линию игрока 1
+    char CountLineSymbolPlayer2; // максимальное число символов в линию игрока 2
+ };
+
+// task 5 
+// ...?
 
 
 
@@ -27,7 +47,7 @@ int main()
     {
         for (int j = 0; j < 3; j++)
             std::cout << GameAry[i][j] << "\t";
-        std::cout << "string" << '\n';
+        std::cout << '\n';
     }
 
     return 0;
