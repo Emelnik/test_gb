@@ -14,10 +14,10 @@ float MoveDuration{ 0.00f };
 double GameDuration = 0.0f;
 
 // task 2
-enum Symbols {zero, cross, empty};
+enum Symbols:char {zero = '0', cross = 'x', empty = '_' };
 
 //task 3
-Symbols GameAry[3][3] = { {empty, empty, empty}, {empty, empty, empty}, {empty, empty, empty } };
+Symbols GameAry[3][3] = { {cross, empty, empty}, {empty, cross, empty}, {empty, empty, cross}};
 
 
 // task 4
@@ -38,6 +38,20 @@ struct GameFeeld
 
 // task 5 
 // ...?
+  union MyData
+    {
+        int a;
+        float b;
+        char c;
+    };
+
+struct MyVariant
+{
+    MyData data;
+    unsigned char isInt : 1;
+    unsigned char isFloat : 1;
+    unsigned char isChar : 1;
+};
 
 
 
@@ -49,6 +63,18 @@ int main()
             std::cout << GameAry[i][j] << "\t";
         std::cout << '\n';
     }
+        std::cout << cross << "\n";
+        std::cout << empty << "\n";
+        std::cout << zero << "\n";
+        std::cout << '\n';
+        std::cout << '\n';
+
+        MyVariant var;
+        var.data.b = 77.77777f;
+        var.isChar = 0;
+        var.isFloat = 1;
+        var.isInt = 0;
+        std::cout << var.data.b << std::endl;
 
     return 0;
 }
