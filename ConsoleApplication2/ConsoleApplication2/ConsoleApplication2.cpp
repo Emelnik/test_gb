@@ -3,9 +3,14 @@
 
 #include <iostream>
 
+int a = 3, b = 4, c = 5, d = 9;
+float result (0.0000f);
+
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    result = a * (b + (static_cast <float>(c) / static_cast <float>(d)));
+    std::cout << result << "\n";
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
