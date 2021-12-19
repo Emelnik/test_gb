@@ -3,14 +3,38 @@
 
 #include <iostream>
 
-int a = 3, b = 4, c = 5, d = 9;
-float result (0.0000f);
+//int a = 3, b = 4, c = 5, d = 9;
+extern int a, b, c, d;
+
+int x = 26;
+float result1 (0.0f);
+int result2;
+const int compare = 21;
+int diff;
 
 
 int main()
 {
-    result = a * (b + (static_cast <float>(c) / static_cast <float>(d)));
-    std::cout << result << "\n";
+    //task 1
+    int a = 3, b = 4, c = 5, d = 9;
+    result1 = a * (b + (static_cast <float>(c) / d)); 
+    std::cout << result1 << "\n";
+    
+    //task 2
+    diff = x - compare;
+    result2 = (x <= compare) ? (diff) : (diff * 2);
+    std::cout << result2 << "\n";
+
+    //task 3
+
+
+
+    //task 4
+    result1 = ::a * (::b + (static_cast <float>(::c) / ::d));
+    std::cout << result1 << "\n";
+
+
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
