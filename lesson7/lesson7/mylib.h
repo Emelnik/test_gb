@@ -5,4 +5,3 @@ namespace mylib {
 	void parseArr(float* arr1, int size);
 };
 
-//bool inRange(int range);

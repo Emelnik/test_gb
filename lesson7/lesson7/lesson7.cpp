@@ -43,7 +43,7 @@ void sortArr(int arr2[])
 }
 
 //Task4
-//#pragma pack(push, 1)
+#pragma pack(push, 1)
 struct Employee
 {
     int TableNum;
@@ -51,7 +51,7 @@ struct Employee
     float Salary;
     bool Merried;
 };
-//#pragma pack (pop)
+#pragma pack (pop)
 
 int main()
 {
@@ -86,14 +86,14 @@ int main()
     std::cout << Engineer->Name << std::endl;
     std::cout << Engineer->Salary << std::endl;
     std::cout << Engineer->TableNum << std::endl;
-    std::cout << sizeof(Engineer) << std::endl;//
+    std::cout << sizeof(Engineer) << std::endl;
 
     std::ofstream fout("Empl.txt");
             fout << Engineer->Merried << std::endl;
             fout << Engineer->Name << std::endl;
             fout << Engineer->Salary << std::endl;
             fout << Engineer->TableNum << std::endl;
-            fout.close(df);
+            fout.close();
 
     delete Engineer;
 

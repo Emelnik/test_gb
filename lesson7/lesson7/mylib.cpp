@@ -31,9 +31,6 @@ namespace mylib
 			{
 				neg++;
 			}
-
-			//std::cout << std::endl;
-			//std::cout << sizeof (arr1[]);
 		}
 		std::cout << std::endl;
 		std::cout << "positive elements: " << pos << std::endl;
